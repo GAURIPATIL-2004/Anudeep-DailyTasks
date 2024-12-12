@@ -1,0 +1,109 @@
+#  to display the main menu
+print("Welcome To Hotel Maharaja")
+def display_menu():
+    print("Menu:")
+    print("1. Starter")
+    print("2. Main Course")
+    print("3. Dessert")
+    print("4. Bill")
+
+#  to display the starter menu
+def display_starter_menu():
+    print("Starter Menu:")
+    print("1. Salad - ₹120")
+    print("2. Sandwich - ₹75")
+
+#  to display the main course menu
+def display_main_course_menu():
+    print("Main Course Menu:")
+    print("1. Pizza - ₹365")
+    print("2. Pasta - ₹250")
+
+#  to display the dessert menu
+def display_dessert_menu():
+    print("Dessert Menu:")
+    print("1. Ice Cream - ₹150")
+    print("2. Cake - ₹200")
+
+# Main function to handle the ordering 
+def main():
+    total = 0
+    pizza_ordered = False
+    pasta_ordered = False
+    salad_ordered = False
+    sandwich_ordered = False
+    ice_cream_ordered = False
+    cake_ordered = False
+
+    while True:
+        display_menu()
+        choice = input("Enter your choice (1 for Starter, 2 for Main Course, 3 for Dessert, 4 for Bill): ")
+
+        if choice == '1':
+            display_starter_menu()
+            starter_choice = input("Enter your choice: ")
+            if starter_choice == '1':
+                total += 120
+                salad_ordered = True
+                print("Salad added - ₹120")
+            elif starter_choice == '2':
+                total += 75
+                sandwich_ordered = True
+                print("Sandwich added - ₹75")
+            else:
+                print("Invalid choice. Please try again.")
+
+        elif choice == '2':
+            display_main_course_menu()
+            main_choice = input("Enter your choice: ")
+            if main_choice == '1':
+                total += 365
+                pizza_ordered = True
+                print("Pizza added - ₹365")
+            elif main_choice == '2':
+                total += 250
+                pasta_ordered = True
+                print("Pasta added - ₹250")
+            else:
+                print("Invalid choice. Please try again.")
+
+        elif choice == '3':
+            display_dessert_menu()
+            dessert_choice = input("Enter your choice: ")
+            if dessert_choice == '1':
+                total += 150
+                ice_cream_ordered = True
+                print("Ice Cream added - ₹150")
+            elif dessert_choice == '2':
+                total += 200
+                cake_ordered = True
+                print("Cake added - ₹200")
+            else:
+                print("Invalid choice. Please try again.")
+
+        elif choice == '4':
+            # Display the order summary and total bill
+            print("Your Order Summary:")
+            if salad_ordered:
+                print("Salad - ₹120")
+            if sandwich_ordered:
+                print("Sandwich - ₹75")
+            if pizza_ordered:
+                print("Pizza - ₹365")
+            if pasta_ordered:
+                print("Pasta - ₹250")
+            if ice_cream_ordered:
+                print("Ice Cream - ₹150")
+            if cake_ordered:
+                print("Cake - ₹200")
+
+            print("Total Bill: ₹" + str(total))
+            print("Thank you for your order!")
+            break
+
+        else:
+            print("Invalid choice. Please try again.")
+
+# Run the main function
+if __name__ == "__main__":
+    main()
