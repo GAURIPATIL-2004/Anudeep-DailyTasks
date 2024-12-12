@@ -1,0 +1,63 @@
+#1
+def div(num1, num2):
+    if num2 != 0:  # Checking for division by zero
+        return num1 / num2
+    else:
+        return "Cannot divide by zero"
+
+# Call the function with two numbers
+result = div(10, 2)
+print("Division result: ",result)
+
+
+
+#2
+def square(num):
+    return num ** 2
+
+# Call the function with a number
+num=int(input("Enter the Number to get Square :"))
+result = square(num)
+print("Square of the number: ",result)
+
+
+#3
+import random
+
+# Generate a list of 5 random numbers between 1 and 100
+numbers = [random.randint(1, 100) for _ in range(5)]
+
+# Display the generated random numbers
+print("Random numbers:", numbers)
+
+# Find and display the maximum and minimum numbers
+max_number = max(numbers)
+min_number = min(numbers)
+
+print("Maximum number:", max_number)
+print("Minimum number:", min_number)
+
+
+
+
+
+#4
+# Accept name input from the user
+name = input("Enter your name: ")
+
+# Display the name in lower case
+print("Your name in lowercase: ",name.lower())
+
+
+
+#5
+# Lambda function to classify the number
+classify_number = lambda x: 'Positive' if x > 0 else 'Negative' if x < 0 else 'Zero'
+
+# Accept input from the user
+number = int(input("Enter a number: "))
+
+# Display the classification
+print("The number is: ",classify_number(number))
+
+
