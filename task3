@@ -1,0 +1,111 @@
+1.
+year = int(input("Enter a year: "))
+
+# Check if the year is divisible by 4
+if (year % 4 == 0 ):
+    print(year," is a leap year.")
+else:
+    print(year," is not a leap year.")
+
+-
+-
+-
+
+
+2.
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+# Compare numbers to find the largest
+if num1 >= num2 and num1 >= num3:
+    print("The largest number is", int(num1))
+elif num2 >= num1 and num2 >= num3:
+    print("The largest number is", int(num2))
+else:
+    print("The largest number is", int(num3))
+
+
+-
+-
+-
+
+3.
+# Get the number from the user
+num = float(input("Enter a number: "))
+
+# Check if the number is positive, negative, or zero
+if num > 0:
+    print("The number is positive.")
+elif num < 0:
+    print("The number is negative.")
+else:
+    print("The number is zero.")
+
+-
+-
+-
+
+
+4.
+# Read the product code and order amount
+product_code = int(input("Enter the product code (1 for Battery-based, 2 for Key-based, 3 for Electrical Charging based): "))
+order_amount = float(input("Enter the order amount: "))
+
+# Check the product code and apply the corresponding discount
+if product_code == 1:  # Battery-based toys
+    if order_amount > 1000:
+        discount = order_amount * 0.10  # 10% discount
+        net_amount = order_amount - discount
+        print("Discount applied: Rs.", discount)
+    else:
+        net_amount = order_amount
+        print("No discount applied.")
+
+elif product_code == 2:  # Key-based toys
+    if order_amount > 100:
+        discount = order_amount * 0.05  # 5% discount
+        net_amount = order_amount - discount
+        print("Discount applied: Rs.", discount)
+    else:
+        net_amount = order_amount
+        print("No discount applied.")
+
+elif product_code == 3:  # Electrical Charging based toys
+    if order_amount > 500:
+        discount = order_amount * 0.10  # 10% discount
+        net_amount = order_amount - discount
+        print("Discount applied: Rs.", discount)
+    else:
+        net_amount = order_amount
+        print("No discount applied.")
+
+else:
+    print("Invalid product code. Please enter 1, 2, or 3.")
+    net_amount = order_amount
+
+# Display the final amount to be paid
+print("Net amount to be paid: Rs.", net_amount)
+
+
+-
+-
+-
+
+
+
+5.
+# Get the distance from the user
+distance = float(input("Enter the distance traveled in kilometers: "))
+
+# Calculate the fare based on the distance
+if distance >= 1 and distance <= 50:
+    fare = distance * 8  # Rs. 8 per km for 1-50 km
+elif distance >= 51 and distance <= 100:
+    fare = distance * 10  # Rs. 10 per km for 51-100 km
+else:
+    fare = distance * 12  # Rs. 12 per km for distance greater than 100 km
+
+# Display the calculated fare
+print("The total fare is Rs.",fare)
+
