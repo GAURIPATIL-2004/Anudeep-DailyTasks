@@ -1,0 +1,73 @@
+#1. Write a Python program to Count all letters, digits, and special
+
+symbols from the given string
+input_string = "P@#yn26at^&i5ve"
+chars = 0
+digits = 0
+symbols = 0
+
+for char in input_string:
+    if char.isalpha():  # Checking if the character is a letter
+        chars += 1
+    elif char.isdigit():  # Checking if the character is a digit
+        digits += 1
+    else:  # Else, it's  a special symbol
+        symbols += 1
+
+print("Chars =", chars)
+print("Digits =", digits)
+print("Symbol =", symbols)
+
+
+
+
+#2. Write a Python program to remove duplicate characters of a given string.
+
+Input = “String and String Function”
+input_string = "String and String Function"
+result = ''
+
+for char in input_string:
+    if char not in result:
+        result += char
+
+print("String without duplicates:", result)
+
+
+
+#3.Write a Python program to count Uppercase, Lowercase, special  character and numeric values in a given stringInput = “Hell0 W0rld ! 123 * 
+# welcome to pYtHoN”
+
+
+input_string = "Hell0 W0rld ! 123 * # welcome to pYtHoN"
+uppercase = lowercase = digits = special = 0
+
+for char in input_string:
+    if char.isupper():
+        uppercase += 1
+    elif char.islower():
+        lowercase += 1
+    elif char.isdigit():
+        digits += 1
+    else:
+        special += 1
+
+print("UpperCase:", uppercase)
+print("LowerCase:", lowercase)
+print("NumberCase:", digits)
+print("SpecialCase:", special)
+
+
+
+
+#4.Write a Python Count vowels in a string input= “Welcome to Python Assignment"
+
+input_string = "Welcome to Python Assignment"
+vowels = "aeiou"
+vowel_count = 0
+
+for char in input_string:
+    if char.lower() in vowels:
+        vowel_count += 1
+
+print("Vowel count:", vowel_count)
