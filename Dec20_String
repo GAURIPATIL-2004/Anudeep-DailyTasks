@@ -1,0 +1,48 @@
+#1. Write a Python program to count the occurrences of each word in a given sentence string = “To change the overall look of your document.
+#To change the look available in the gallery” 
+sentence="To change the overall look of your document.To change the look availablein the gallery"
+words=sentence.split()#split sentence into words
+word_count={}
+
+for word in words:
+    word=word.lower().strip('.').strip(',')#removing punctuation and converting into lower case
+
+    if word in word_count:
+        word_count[word]+=1
+    else:
+        word_count[word]=1
+
+print("Word counts:")
+for word,count in word_count.items():
+    print(word ," = occur in ", count,"times")#printing word with count
+
+
+
+#2.Write a Python program to remove a newline in Python String = "\nBest \nDeeptech \nPython \nTraining\n" 
+string="\nBest \nDeeptech \nPython \nTraining \n"
+string=string.replace('\n','')#replace newline with space
+
+print("String without newline :",string)#printing string without newline
+                      
+
+
+#3.Write a Python program to reverse words in a string String = “Deeptech Python Training” 
+string="Deeptech Python Training"
+words=string.split()#split string into words
+
+reversed_string=''.join(reversed(words))#reversing the list of words and join them back
+print("Reversed string :",reversed_string)
+
+
+#4.Write a Python program to count and display the vowels of a given text String=”Welcome to python Training”
+
+string="Welcome to Python Training"
+vowels="aeiou"
+vowels_count=0
+
+for char in string:
+    if char.lower() in vowels:
+        vowels_count+=1
+
+print("Number of vovels :",vowels_count)
+
