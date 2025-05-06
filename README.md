@@ -20,7 +20,7 @@ This course covers everything from basic syntax to advanced programming concepts
 
 ### 🚀 Example of a Python program
 Here’s a **Python sample code** for learning control flow:
-![control-flow-gif](https://media.giphy.com/media/d2lcHJTG5Tscg/giphy.gif)
+![control-flow-gif]()
 
 ```python
 def check_even_odd(number):
